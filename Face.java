@@ -20,17 +20,17 @@ public class Face{
   public Face(int startX, int startY, Color color){
     this.startX = startX;
     this.startY = startY;
-    this.Width = width;
-    this.Height = height;
+    this.width = width;
+    this.height = height;
     this.color = color;
-    Nose myNose = new Nose(startX + Width/2,startY + height/4, width/2, Color.yellow);
-    Eyes myEyes = new Eyes(startX + Width/3,startY + height/2, width/2, Color.black);
+    Nose myNose = new Nose(startX + width/2,startY + height/4,width/2, Color.yellow);
+    Eyes myEyes = new Eyes(startX + width/3,startY + height/2, width/2, Color.black);
 
   }
-  public static void drawFace(Graphics g){
+  public void drawFace(Graphics g){
       g.setColor(color);
       g.fillOval(startX, startY, width, height);
-      myNose.drawNose(g);
-      myEyes.drawEyes(g);
+      Nose.drawNose(g);
+      Eyes.drawEyes(g);
     }
   }

@@ -22,7 +22,7 @@ public class Eyes{
     this.width = width;
     this.height = height;
   }
-    public static void drawEyes(Graphics g){
+    public void drawEyes(Graphics g){
       g.setColor(color);
       g.fillOval(startX, startY, width, height);
       g.fillOval(startX + 125, startY, width, height);
