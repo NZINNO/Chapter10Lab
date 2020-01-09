@@ -1,6 +1,5 @@
 import java.awt.*;
 import java.applet.*;
-
 public class Nose{
   private Color color;
   private int startX;
@@ -9,27 +8,24 @@ public class Nose{
   private int height;
 
   public Nose(){
-    color = new Color(0,0,0);
-    startX = 100;
-    startY = 115;
-    width = 10;
-    height = 10;
+  startX = 105;
+  startY = 115;
+  width = 10;
+  height = 10;
+  color = new Color(0,0,0);
 }
-  public Nose(int startX, int startY, int width, int height, Color color){
-    this.color = color;
-    this.startX = startX;
-    this.startY = startY;
-    this.width = width;
-    this.height = height;
-
-  }
-  public void drawNose(Graphics g){
-    g.setColor(color);
-    g.fillOval(startX, startY, width, height);
-    g.fillOval(startX + 10, startY, width, height);
-// Draw the Nose
-
-  }
+public Face(int startX, int startY, int width, int height, Color color){
+  this.startX = startX;
+  this.startY = startY;
+  this.Width = width;
+  this.Height = height;
+  this.color = color;
+}
+    public static void drawNose(Graphics g){
+      g.setColor(new Color(0,0,0));
+      g.fillOval(105,115,10,10);
+      g.fillOval(115,115,10,10);
 
 
+}
 }

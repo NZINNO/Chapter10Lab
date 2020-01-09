@@ -19,5 +19,6 @@ public class SmileFace extends Face{
     arcAngle = 90
   }
   public static void super.drawFace(Graphics g){
-
+    g.setColor(new Color(0,0,0));
+    g.fillArc(45,125,100,50,0,90);
 }

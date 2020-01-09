@@ -7,7 +7,6 @@ public class Face{
   private int width;
   private int height;
 
-
   public Face(){
     startX = 10;
     startY = 10;
