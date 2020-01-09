@@ -1,60 +1,37 @@
 import java.awt.*;
 import java.applet.*;
 public class Face{
-  private FaceColor z;
-  private int FaceStartX;
-  private int FaceStartY;
-  private int FaceWidth;
-  private int FaceHeight;
-  private EyeColor b:
-  private int EyeStartX;
-  private int EyeStartY;
-  private int EyeWidth;
-  private int EyeHeight;
-  private NoseColor n;
-  private int NoseStartX;
-  private int NoseStartY;
-  private int NoseWidth;
-  private int NoseHeight;
+  private Color color;
+  private int startX;
+  private int startY;
+  private int width;
+  private int height;
+
 
   public Face(){
-    FaceStartX = 10;
-    FaceStartY = 10;
-    FaceWidth = 200;
-    FaceHeight = 200;
-    z = (255,255,0);
-    b =
-    EyeStartX = 60;
-    EyeStartY = 120;
-    EyeWidth = 25;
-    EyeHeight = 25;
-    n =
-    NoseStartX = 110;
-    NoseStartY = 110;
-    NoseWidth = 15;
-    noseHeight = 15;
+    startX = 10;
+    startY = 10;
+    width = 200;
+    height = 200;
+    color = new Color(255,255,0);
+    Nose myNose = new Nose(100,115,10,10, new Color(0,0,0));
+    Eyes myEyes = new Eyes(35,45,25,25, new Color(0,0,0));
   }
 
-  public Face(int FaceStartX, int FaceStartY, Color z){
-    this.FacestartX = FaceStartX;
-    this.FacestartY = FaceStartY;
-    this.FaceWidth = FaceWidth;
-    this.FaceHeight = FaceHeight;
-    this.z = z;
-    this.EyeStartX = EyeStartX;
-    this.EyesStartY = EyeStartY;
-    this.EyeWidth = EyeWidth;
-    this.EyeHeight =  EyeHeight;
-    this.b = b;
-    this.NoseStartX = NoseStartX;
-    this.NoseStartY = NoseStartY;
-    this.NoseWidth = NoseWidth;
-    this.NoseHeight = NoseHeight;
-
+  public Face(int startX, int startY, Color color){
+    this.startX = startX;
+    this.startY = startY;
+    this.Width = width;
+    this.Height = height;
+    this.color = color;
+    Nose myNose = new Nose(startX + Width/2,startY + height/4, width/2, Color.yellow);
+    Eyes myEyes = new Eyes(startX + Width/3,startY + height/2, width/2, Color.black);
 
   }
   public static void drawFace(Graphics g){
-      g.setColor(z);
-      g.fillOval(FacestartX, FacestartY, FaceWidth, FaceHeight);
+      g.setColor(color);
+      g.fillOval(startX, startY, width, height);
+      myNose.drawNose(g);
+      myEyes.drawEyes(g);
     }
   }
